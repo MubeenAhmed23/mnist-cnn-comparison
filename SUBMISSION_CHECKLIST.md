@@ -5,8 +5,8 @@
 1. Open `report.pdf` and confirm the name, matriculation number, and course details are correct. It contains 7 pages of main text plus front matter, references, and the code appendix; the task allows 7-10 pages of text plus code.
 2. Review the report and notebook personally. Make sure you understand the model adaptation, the recorded metrics, and the limitations well enough to explain them. Do not submit text or claims you cannot defend as your own work.
 3. Add or confirm any student identifier or declaration that the myCampus assignment form requires. The title page lists matriculation number 102303212.
-4. The executed notebook PDF `mnist_cnn_comparison_notebook.pdf` is included. It was exported from saved outputs without retraining. Review it and submit it with the report, or use a repository link if the course instructions require that alternative.
-5. In myCampus, open the October 2026 Project Report submission, enter an accurate title, attach `report.pdf` and `mnist_cnn_comparison_notebook.pdf`, and submit the separate electronic affidavit in myCampus as required by the course guidelines. Follow any additional fields shown on the submission page.
+4. The title page of `report.pdf` contains a clickable link to the public repository with the code and notebook. The task accepts a repository link as an alternative to a PDF export of the executed notebook.
+5. In myCampus, open the October 2026 Project Report submission, enter an accurate title, attach `report.pdf`, and submit the separate electronic affidavit in myCampus as required by the course guidelines. Follow any additional fields shown on the submission page.
 6. Confirm the final submission receipt and keep a local copy of the submitted PDF and repository link.
 
 ## Project record
