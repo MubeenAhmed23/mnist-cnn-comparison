@@ -129,7 +129,10 @@ def run_experiment():
 
     (x_train, y_train, y_train_oh), (x_test, y_test, y_test_oh) = load_mnist()
     print(f"Dataset: train={x_train.shape}, test={x_test.shape}; seed={SEED}")
-    print(f"Runtime: TensorFlow {tf.__version__}; Python {platform.python_version()}; {platform.processor() or platform.machine()}")
+    print(
+        f"Runtime: TensorFlow {tf.__version__}; Python {platform.python_version()}; "
+        f"{platform.processor() or platform.machine()}"
+    )
 
     models = [
         ("Chollet (2021)", build_chollet_model()),
@@ -211,17 +214,29 @@ def _save_figures(payload):
     ax.set_title("Held-out MNIST test accuracy", weight="bold")
     ax.grid(axis="y", alpha=0.25)
     for bar, value in zip(bars, acc):
-        ax.text(bar.get_x() + bar.get_width() / 2, value + 0.1, f"{value:.2f}%", ha="center", fontsize=10)
+            ax.text(
+                bar.get_x() + bar.get_width() / 2,
+                value + 0.1,
+                f"{value:.2f}%",
+                ha="center",
+                fontsize=10,
+            )
     fig.savefig(FIGURES_DIR / "accuracy_comparison.png", dpi=220, bbox_inches="tight")
     plt.close(fig)
 
 
 def _save_model_parameter_table(models):
-    (x_train, _, _), (x_test, _, _) = load_mnist()
     rows = []
     for name, model in models:
         for layer in model.layers:
-            rows.append({"model": name, "layer": layer.name, "output_shape": str(layer.output.shape), "parameters": int(layer.count_params())})
+            rows.append(
+                {
+                    "model": name,
+                    "layer": layer.name,
+                    "output_shape": str(layer.output.shape),
+                    "parameters": int(layer.count_params()),
+                }
+            )
     out = RESULTS_DIR / "layer_parameters.csv"
     import csv
     with out.open("w", newline="", encoding="utf-8") as f:

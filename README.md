@@ -6,6 +6,7 @@ This project compares François Chollet's published Keras Simple MNIST ConvNet w
 
 - `report.pdf` — academic report with the experiment, measured results, limitations, process and resource reflection, references, and code appendix.
 - `mnist_cnn_comparison.ipynb` — notebook with saved experiment outputs and visualizations.
+- `mnist_cnn_comparison_notebook.pdf` — print-ready export of the executed notebook outputs; no models were rerun for the export.
 - `project_cv.py` — reusable training, evaluation, and figure-generation code.
 - `requirements.txt` — Python dependencies.
 - `results/experiment_results.json` — run configuration, metrics, and histories.
